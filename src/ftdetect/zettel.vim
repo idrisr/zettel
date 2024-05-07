@@ -2,6 +2,7 @@ augroup zettel
     autocmd!
     autocmd BufNewFile,BufRead ~/roam-export/*.md setlocal filetype=zettel
     autocmd Filetype zettel setlocal colorcolumn=81
+    autocmd Filetype zettel setlocal conceallevel=2
     autocmd Filetype zettel setlocal foldmethod=expr
     autocmd Filetype zettel setlocal foldexpr=GetZettelFold(v:lnum)
     autocmd Filetype zettel setlocal syntax=0 dictionary+=/usr/share/dict/words complete+=k
