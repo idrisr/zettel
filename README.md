@@ -4,12 +4,11 @@ This is a table of contents for your project. It helps the reader navigate throu
 - [Quick Start Demo](#quick-start-demo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Usage](#usage)
 
 # Quick Start Demo
 
 This is a simple vim plugin which defines a fold expression for the option
-`foldexpr` for a filetype I'm calling zettel, which relies only on indentation
+`foldexpr` for a filetype I'm calling `zettel`, which relies only on indentation
 for folding.
 
 From this original file, the difference in fold behavior can be seen
@@ -18,16 +17,19 @@ From this original file, the difference in fold behavior can be seen
 <img src="img/original.png" alt="original" width="358" height="462">
 
 ## Default Fold
-<img src="img/good-fold.png" alt="good fold" width="358" height="462">
+<img src="img/bad-fold.png" alt="bad fold" width="358" height="462">
 
 ## Custom Fold
-<img src="img/bad-fold.png" alt="bad fold" width="358" height="462">
+<img src="img/good-fold.png" alt="good fold" width="358" height="462">
 
 # Installation
 
-## Nix
+## nix flakes
+This repo defines an overlay, so you can add the overlay to your nixpkgs and
+then import then install the package.
 
-## Non Nix
+## non nix
+Download the repo and put it in the right place.
 
 # Status
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/idrisr/zettel?include_prereleases)](https://img.shields.io/github/v/release/idrisr/zettel?include_prereleases)
