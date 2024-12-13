@@ -5,15 +5,29 @@ This is a table of contents for your project. It helps the reader navigate throu
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Development](#development)
-- [Contribute](#contribute)
-- [License](#license)
 
 # Quick Start Demo
 
-# Usage
+This is a simple vim plugin which defines a fold expression for the option
+`foldexpr` for a filetype I'm calling zettel, which relies only on indentation
+for folding.
 
-Next, you have to explain how to use your project. You can create subsections under here to explain more clearly.
+From this original file, the difference in fold behavior can be seen
+
+## Original
+<img src="img/original.png" alt="original" width="358" height="462">
+
+## Default Fold
+<img src="img/good-fold.png" alt="good fold" width="358" height="462">
+
+## Custom Fold
+<img src="img/bad-fold.png" alt="bad fold" width="358" height="462">
+
+# Installation
+
+## Nix
+
+## Non Nix
 
 # Status
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/idrisr/zettel?include_prereleases)](https://img.shields.io/github/v/release/idrisr/zettel?include_prereleases)
@@ -22,9 +36,3 @@ Next, you have to explain how to use your project. You can create subsections un
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/idrisr/zettel)](https://img.shields.io/github/issues-pr/idrisr/zettel)
 [![GitHub](https://img.shields.io/github/license/idrisr/zettel)](https://img.shields.io/github/license/idrisr/zettel)
     ![workflow status](https://github.com/idrisr/zettel/actions/workflows/push.yml/badge.svg)
-
-![good fold](img/good-fold.png)
-![bad fold](img/bad-fold.png)
-![original](img/original.png)
-
-<img src="img/good-fold.png" alt="Alt text" width="358" height="462">
