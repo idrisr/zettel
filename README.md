@@ -38,3 +38,6 @@ Download the repo and put it in the right place.
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/idrisr/zettel)](https://img.shields.io/github/issues-pr/idrisr/zettel)
 [![GitHub](https://img.shields.io/github/license/idrisr/zettel)](https://img.shields.io/github/license/idrisr/zettel)
     ![workflow status](https://github.com/idrisr/zettel/actions/workflows/push.yml/badge.svg)
+
+# Further Reading
+See the fold related chapters from the book [Learn Vimscript the Hard Way](https://learnvimscriptthehardway.stevelosh.com/chapters/48.html).
