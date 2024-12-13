@@ -24,7 +24,7 @@ From this original file, the difference in fold behavior can be seen
 
 # Installation
 
-## nix flakes
+## nix
 This repo defines an overlay, so you can add the overlay to your nixpkgs and
 then import then install the package.
 
