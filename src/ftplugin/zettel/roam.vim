@@ -33,8 +33,6 @@ function! NextNonBlankLine(lnum)
     return -2
 endfunction
 
-let g:fzf_vim = {}
-
 command! -bang -nargs=* ContentsOfLinks call
     \ fzf#vim#grep('rg --replace ' . "'$1' " . '--ignore-case --only-matching --no-filename "\[\[(.+?)\]\]" '
     \ . shellescape(expand('%:p'))
@@ -44,33 +42,4 @@ command! -bang -nargs=* ContentsOfLinks call
     \ . '| xargs -0 rg --column --ignore-case --line-number --no-heading ' . shellescape(<q-args>) . ' {}',
     \ 1,
     \ fzf#vim#with_preview( {'options': '--exact'} ),
-    \ <bang>0)
-
-command! -bang -nargs=* LinksOut call
-    \ fzf#vim#grep('rg -r ' . "'$1' " . '--ignore-case --only-matching --no-line-number --no-filename "\[\[(.+?)\]\]" '
-    \ . shellescape(expand('%:p'))
-    \ . '| sort -ur '
-    \ . '| awk ' . "'" . '{print $0".md:1"}' . "'",
-    \ 0,
-    \ fzf#vim#with_preview( {'options': '--tac --exact --delimiter : --with-nth 1'} ),
-    \ <bang>0)
-
-command! -bang -nargs=* LinksIn call
-    \ fzf#vim#grep("rg --ignore-case --column --line-number --no-heading --color=always '\\[\\["
-    \ . expand('%:t:r')
-    \ . "\\]\\]'",
-    \ 1,
-    \ fzf#vim#with_preview( {'options': '--delimiter : --nth 4..'} ),
-    \ <bang>0)
-
-command! -bang -nargs=* Rg call
-    \ fzf#vim#grep("rg --ignore-case --column --line-number --no-heading --color=always ".shellescape(<q-args>),
-    \ 1,
-    \ fzf#vim#with_preview( {'options': '--exact --delimiter : --nth 4..'} ),
-    \ <bang>0)
-
-command! -bang -nargs=* Tg call
-    \ fzf#vim#grep("rg --ignore-case --word-regexp --column --line-number --no-heading --color=always ".shellescape(<q-args>),
-    \ 1,
-    \ fzf#vim#with_preview( {'options': '--delimiter : --nth 4..'} ),
     \ <bang>0)
