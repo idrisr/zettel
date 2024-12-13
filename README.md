@@ -4,6 +4,8 @@ This is a table of contents for your project. It helps the reader navigate throu
 - [Quick Start Demo](#quick-start-demo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
+- [Status](#status)
+- [Further Reading](#further-reading)
 
 # Quick Start Demo
 
