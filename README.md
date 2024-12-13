@@ -26,3 +26,5 @@ Next, you have to explain how to use your project. You can create subsections un
 ![good fold](img/good-fold.png)
 ![bad fold](img/bad-fold.png)
 ![original](img/original.png)
+
+<img src="img/good-fold.png" alt="Alt text" width="300" height="200">
