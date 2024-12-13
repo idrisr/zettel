@@ -32,14 +32,3 @@ function! NextNonBlankLine(lnum)
 
     return -2
 endfunction
-
-command! -bang -nargs=* ContentsOfLinks call
-    \ fzf#vim#grep('rg --replace ' . "'$1' " . '--ignore-case --only-matching --no-filename "\[\[(.+?)\]\]" '
-    \ . shellescape(expand('%:p'))
-    \ . '| sort -ur'
-    \ . '| awk ' . "'" . '{print $0".md"}' . "'"
-    \ . '| tr "\n" "\0" '
-    \ . '| xargs -0 rg --column --ignore-case --line-number --no-heading ' . shellescape(<q-args>) . ' {}',
-    \ 1,
-    \ fzf#vim#with_preview( {'options': '--exact'} ),
-    \ <bang>0)
