@@ -25,24 +25,6 @@ The badges used here were generated with [shields.io](https://shields.io/).
 
 You can add a workflow status badge to indicate the status of your workflows in your README. This can used to answer questions like, `is the build working?` or `are the e2e tests passing?`.
 
-The badges used here are explained below:
-
-<!-- Add badges with link to Shields IO -->
-
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/idrisr/zettel?include_prereleases)
-: Shows the current release version.
-
-![GitHub last commit](https://img.shields.io/github/last-commit/idrisr/zettel)
-: Shows the last commit time. Good indication of the project activity.
-
-![GitHub issues](https://img.shields.io/github/issues-raw/idrisr/zettel)
-: Dynamic badge that shows the number of open issues in the project.
-
-![GitHub pull requests](https://img.shields.io/github/issues-pr/idrisr/zettel)
-: Similar dynamic badge, but for pull requests.
-
-![GitHub](https://img.shields.io/github/license/idrisr/zettel)
-: Shows the open source license the project uses.
 
 # Table of Contents
 
