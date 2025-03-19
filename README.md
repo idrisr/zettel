@@ -1,6 +1,5 @@
 # Table of Contents
 
-This is a table of contents for your project. It helps the reader navigate through the README quickly.
 - [Quick Start Demo](#quick-start-demo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
