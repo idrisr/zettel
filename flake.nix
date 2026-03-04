@@ -1,20 +1,23 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/25.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { nixpkgs, flake-utils, ... }:
-    let
-      system = flake-utils.lib.system.x86_64-linux;
-      pkgs = nixpkgs.legacyPackages.${system};
-      zettel = pkgs.callPackage ./zettel-plugin.nix { };
-    in {
-      packages.${system} = { default = zettel; };
-      overlays = {
-        zettel = final: prev: {
-          zettel = prev.callPackage ./zettel-plugin.nix { };
-        };
-      };
-    };
+    flake-utils.lib.eachSystem
+      [ "x86_64-linux" "aarch64-darwin" ]
+      (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          zettel = pkgs.callPackage ./zettel-plugin.nix { };
+        in
+        {
+          packages = { default = zettel; };
+          overlays.default = {
+            zettel = final: prev: {
+              zettel = prev.callPackage ./zettel-plugin.nix { };
+            };
+          };
+        });
 }
