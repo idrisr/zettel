@@ -14,10 +14,11 @@
         in
         {
           packages = { default = zettel; };
-          overlays.default = {
-            zettel = final: prev: {
-              zettel = prev.callPackage ./zettel-plugin.nix { };
-            };
-          };
-        });
+
+        }) //
+    {
+      overlays.default = final: prev: {
+        zettel = prev.callPackage ./zettel-plugin.nix { };
+      };
+    };
 }
